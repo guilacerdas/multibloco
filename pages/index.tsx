@@ -1,8 +1,82 @@
-/* eslint-disable @next/next/no-img-element */
-/* eslint-disable jsx-a11y/alt-text */
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import React, { useState } from "react";
 import Link from "next/link";
+import Menu from "@components/public/components/menu";
+
+const dynamicMenu = [
+  {
+    naipe: "Agogo",
+    isOpen: false,
+    submenu: [
+      { ritmo: "Baião", url: "agogo-tamborim/baiao" },
+      { ritmo: "Xote", url: "agogo-tamborim/xote" },
+      { ritmo: "Quadrilha", url: "agogo-tamborim/quadrilha" },
+    ],
+  },
+  {
+    naipe: "Caixa",
+    isOpen: false,
+    submenu: [
+      { ritmo: "Baião", url: "caixa/baiao" },
+      { ritmo: "Xote", url: "caixa/xote" },
+      { ritmo: "Quadrilha", url: "caixa/quadrilha" },
+    ],
+  },
+  {
+    naipe: "Repique",
+    isOpen: false,
+    submenu: [
+      { ritmo: "Baião", url: "repique/baiao" },
+      { ritmo: "Xote", url: "repique/xote" },
+      { ritmo: "Quadrilha", url: "repique/quadrilha" },
+    ],
+  },
+  {
+    naipe: "Surdo",
+    isOpen: false,
+    submenu: [
+      { ritmo: "Baião", url: "surdo/baiao" },
+      { ritmo: "Xote", url: "surdo/xote" },
+      { ritmo: "Quadrilha", url: "surdo/quadrilha" },
+    ],
+  },
+  {
+    naipe: "Tamborim",
+    isOpen: false,
+    submenu: [
+      { ritmo: "Baião", url: "tamborim/baiao" },
+      { ritmo: "Xote", url: "tamborim/xote" },
+      { ritmo: "Quadrilha", url: "tamborim/quadrilha" },
+    ],
+  },
+  {
+    naipe: "Timbal",
+    isOpen: false,
+    submenu: [
+      { ritmo: "Baião", url: "timbal/baiao" },
+      { ritmo: "Xote", url: "timbal/xote" },
+      { ritmo: "Quadrilha", url: "timbal/quadrilha" },
+    ],
+  },
+  {
+    naipe: "Xequerê",
+    isOpen: false,
+    submenu: [
+      { ritmo: "Baião", url: "xequere/baiao" },
+      { ritmo: "Xote", url: "xequere/xote" },
+      { ritmo: "Quadrilha", url: "xequere/quadrilha" },
+    ],
+  },
+  {
+    naipe: "Zabumba",
+    isOpen: false,
+    submenu: [
+      { ritmo: "Baião", url: "zabumba/baiao" },
+      { ritmo: "Xote", url: "zabumba/xote" },
+      { ritmo: "Quadrilha", url: "zabumba/quadrilha" },
+    ],
+  },
+];
 
 export default function Home() {
   const [agogo, setAgogo] = useState(false);
@@ -140,7 +214,7 @@ export default function Home() {
               <button onClick={toggleTimbal} className="flex">
                 <div className="flex items-center gap-3 text-lg border-b border-gray-800">
                   Timbal
-                  <div>{timbal ? <AiOutlineClose /> : <AiOutlineMenu />}</div>
+                  <div>{timbal ? <AiOutlineMenu /> : <AiOutlineClose />}</div>
                 </div>
               </button>
               <ul className={`${timbal ? "" : "hidden"} ml-8`}>
@@ -195,12 +269,13 @@ export default function Home() {
             </li>
           </ul>
         </div>
-        <img
+        {/* <image
           src="https://static.wixstatic.com/media/4ac115_3b5733d0022c4106a1856fd81ea10cae.jpg/v1/fill/w_265,h_76,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/4ac115_3b5733d0022c4106a1856fd81ea10cae.jpg"
           alt="Ambiente Virtual de Ensino - Multibloco"
           className="flex justify-end w-4/12 h-7"
-        />
+        /> */}
       </header>
+      <Menu data={dynamicMenu} />
     </div>
   );
 }
