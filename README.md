@@ -40,15 +40,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ___________________________
 Instalar TailWind
 
-________________________
-Instalar Lodash
+______________________
+Instalar React-Icons
+npm install @react-icons/all-files --save
 
-$ npm i -g npm
-$ npm i --save lodash
-____________________________________
-/react-component-transition
-
-npm install react-component-transition --save 
-(se não rodar, adicionar --force no final.)
-_________________________________
 
