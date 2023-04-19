@@ -214,7 +214,7 @@ export default function Home() {
               <button onClick={toggleTimbal} className="flex">
                 <div className="flex items-center gap-3 text-lg border-b border-gray-800">
                   Timbal
-                  <div>{timbal ? <AiOutlineMenu /> : <AiOutlineClose />}</div>
+                  <div>{timbal ? <AiOutlineClose /> : <AiOutlineMenu />}</div>
                 </div>
               </button>
               <ul className={`${timbal ? "" : "hidden"} ml-8`}>

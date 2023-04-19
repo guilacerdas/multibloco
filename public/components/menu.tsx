@@ -2,9 +2,6 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import React from "react";
 
 const Menu = (data: any) => {
-  data.map(() => {
-    return data;
-  });
   return (
     <>
       <div>
