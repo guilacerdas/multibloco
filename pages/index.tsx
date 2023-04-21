@@ -116,14 +116,17 @@ export default function HomePage() {
             className="flex flex-col items-center justify-center w-full gap-1"
           >
             <p className="text-lg">Digite a senha do seu naipe:</p>
-            <div className="flex w-[90%] border gap-2 border-red-600 rounded-md">
+            <div className="flex w-[90%] sm:w-6/12 lg:w-4/12 xl:w-3/12 border gap-2 border-red-600 rounded-md">
               <input
                 type={type}
                 onChange={(evt) => setPassword(evt.target.value)}
-                className="w-full bg-white "
+                className="w-full p-1 bg-white"
               />
               <div className="flex">
-                <div className="flex w-full" onClick={alternateEye}>
+                <div
+                  className="flex items-center w-full"
+                  onClick={alternateEye}
+                >
                   {eyes ? (
                     <BsFillEyeSlashFill className="text-2xl text-red-600" />
                   ) : (
@@ -131,7 +134,7 @@ export default function HomePage() {
                   )}
                 </div>
               </div>
-              <div className="flex">
+              <div className="flex items-center">
                 <button onClick={suitsPassword}>
                   <AiOutlineSend className="text-2xl text-red-600" />
                 </button>
