@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Caixa = () => {
   return (
     <>
-      <label for="pet-select">Escolha um ritmo:</label>
+      <label htmlFor="pet-select">Escolha um ritmo:</label>
 
       <select
         name="pets"
