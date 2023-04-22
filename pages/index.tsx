@@ -1,10 +1,18 @@
 import React, { useState } from "react";
+import { useRouter } from "next/router";
+import Image from "next/image";
 import { AiOutlineSend } from "react-icons/ai";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
-import Image from "next/image";
-import InitialPage from "@components/public/components/InitialPage";
+import TrianguloMatraca from "@components/public/components/triangulomatraca";
+import Caixa from "@components/public/components/caixa";
+import Repique from "@components/public/components/repique";
+import Surdo from "@components/public/components/surdo";
+import Tamborim from "@components/public/components/tamborim";
+import Timbal from "@components/public/components/timbal";
+import Xequere from "@components/public/components/xequere";
+import Zabumba from "@components/public/components/zabumba";
 
-const dynamicMenu = [
+const dynamicContent = [
   {
     naipe: "Agogo",
     isOpen: false,
@@ -78,10 +86,19 @@ const dynamicMenu = [
     ],
   },
 ];
-export default function HomePage() {
-  const [activePage, setActivePage] = useState("main");
-  const [password, setPassword] = useState("");
 
+export default function HomePage() {
+  const [activePage, setActivePage] = useState("");
+  const [password, setPassword] = useState("");
+  const [showForm, setShowForm] = useState(true);
+  const [triangulo, setTriangulo] = useState(false);
+  const [caixa, setCaixa] = useState(false);
+  const [repique, setRepique] = useState(false);
+  const [surdo, setSurdo] = useState(false);
+  const [tamborim, setTamborim] = useState(false);
+  const [timbal, setTimbal] = useState(false);
+  const [xequere, setXequere] = useState(false);
+  const [zabumba, setZabumba] = useState(false);
   const [eyes, setEyes] = useState(false);
   const [type, setType] = useState("password");
   const alternateEye = () => {
@@ -94,8 +111,59 @@ export default function HomePage() {
   };
   const suitsPassword = (evt: any) => {
     evt.preventDefault();
-
-    window.alert(`a senha digitada foi ${password}`);
+    if (
+      password != "triangulomatraca" &&
+      password != "caixa" &&
+      password != "repique" &&
+      password != "surdo" &&
+      password != "tamborim" &&
+      password != "timbal" &&
+      password != "xequere" &&
+      password != "zabumba"
+    ) {
+      window.alert("Senha incorreta, tente novamente");
+    }
+    console.log(password);
+    if (password === "triangulomatraca") {
+      setShowForm(!showForm);
+      setActivePage(password);
+      setTriangulo(!triangulo);
+    }
+    if (password === "caixa") {
+      setShowForm(!showForm);
+      setActivePage(password);
+      setCaixa(!caixa);
+    }
+    if (password === "repique") {
+      setShowForm(!showForm);
+      setActivePage(password);
+      setRepique(!repique);
+    }
+    if (password === "surdo") {
+      setShowForm(!showForm);
+      setActivePage(password);
+      setSurdo(!surdo);
+    }
+    if (password === "tamborim") {
+      setShowForm(!showForm);
+      setActivePage(password);
+      setTamborim(!tamborim);
+    }
+    if (password === "timbal") {
+      setShowForm(!showForm);
+      setActivePage(password);
+      setTimbal(!timbal);
+    }
+    if (password === "xequere") {
+      setShowForm(!showForm);
+      setActivePage(password);
+      setXequere(!xequere);
+    }
+    if (password === "zabumba") {
+      setShowForm(!showForm);
+      setActivePage(password);
+      setZabumba(!zabumba);
+    }
   };
 
   return (
@@ -111,36 +179,46 @@ export default function HomePage() {
               alt={"Logo Multibloco Junino"}
             ></Image>
           </header>
-          <form
-            onSubmit={suitsPassword}
-            className="flex flex-col items-center justify-center w-full gap-1"
-          >
-            <p className="text-lg">Digite a senha do seu naipe:</p>
-            <div className="flex w-[90%] sm:w-6/12 lg:w-4/12 xl:w-3/12 border gap-2 border-red-600 rounded-md">
-              <input
-                type={type}
-                onChange={(evt) => setPassword(evt.target.value)}
-                className="w-full p-1 bg-white"
-              />
-              <div className="flex">
-                <div
-                  className="flex items-center w-full"
-                  onClick={alternateEye}
-                >
-                  {eyes ? (
-                    <BsFillEyeSlashFill className="text-2xl text-red-600" />
-                  ) : (
-                    <BsFillEyeFill className="text-2xl text-red-600" />
-                  )}
+          {showForm && (
+            <form
+              onSubmit={suitsPassword}
+              className="flex flex-col items-center justify-center w-full gap-1"
+            >
+              <p className="text-lg">Digite a senha do seu naipe:</p>
+              <div className="flex w-[90%] sm:w-6/12 lg:w-4/12 xl:w-3/12 border gap-2 border-red-600 rounded-md">
+                <input
+                  type={type}
+                  onChange={(evt) => setPassword(evt.target.value)}
+                  className="w-full p-1 bg-white"
+                />
+                <div className="flex">
+                  <div
+                    className="flex items-center w-full"
+                    onClick={alternateEye}
+                  >
+                    {eyes ? (
+                      <BsFillEyeSlashFill className="text-2xl text-red-600" />
+                    ) : (
+                      <BsFillEyeFill className="text-2xl text-red-600" />
+                    )}
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <button onClick={suitsPassword}>
+                    <AiOutlineSend className="text-2xl text-red-600" />
+                  </button>
                 </div>
               </div>
-              <div className="flex items-center">
-                <button onClick={suitsPassword}>
-                  <AiOutlineSend className="text-2xl text-red-600" />
-                </button>
-              </div>
-            </div>
-          </form>
+            </form>
+          )}
+          {triangulo && <TrianguloMatraca />}
+          {caixa && <Caixa />}
+          {repique && <Repique />}
+          {surdo && <Surdo />}
+          {tamborim && <Tamborim />}
+          {timbal && <Timbal />}
+          {xequere && <Xequere />}
+          {zabumba && <Zabumba />}
         </div>
       </section>
     </>
