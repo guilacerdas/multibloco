@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import { AiOutlineSend } from "react-icons/ai";
+import { AiOutlineCloseCircle, AiOutlineSend } from "react-icons/ai";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import TrianguloMatraca from "@components/public/components/triangulomatraca";
 import Caixa from "@components/public/components/caixa";
@@ -170,14 +170,19 @@ export default function HomePage() {
     <>
       <section className="flex justify-center w-full h-screen py-2 bg-white text-stone-800">
         <div className="container flex flex-col items-center gap-5 mx-4 ">
-          <header className="flex flex-col items-center w-full gap-3">
-            <p className="text-3xl">Repositório Virtual</p>
+          <header className="flex flex-col items-center w-full gap-3 lg:flex-row lg:justify-center">
+            <p className="text-3xl ">Repositório Virtual</p>
             <Image
               src="/images/MultiblocoJunino.png"
               width="320"
               height="420"
               alt={"Logo Multibloco Junino"}
             ></Image>
+            {/* {showForm === false ? (
+              <div className="flex h-full">
+                <AiOutlineCloseCircle className="text-3xl text-red-600" />
+              </div>
+            ) : null} */}
           </header>
           {showForm && (
             <form
