@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { useRouter } from "next/router";
 import Image from "next/image";
-import { AiOutlineCloseCircle, AiOutlineSend } from "react-icons/ai";
+import { AiOutlineSend } from "react-icons/ai";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
-import TrianguloMatraca from "@components/public/components/triangulomatraca";
+import TrianguloMaraca from "@components/public/components/triangulomaraca";
 import Caixa from "@components/public/components/caixa";
 import Repique from "@components/public/components/repique";
 import Surdo from "@components/public/components/surdo";
@@ -11,81 +10,6 @@ import Tamborim from "@components/public/components/tamborim";
 import Timbal from "@components/public/components/timbal";
 import Xequere from "@components/public/components/xequere";
 import Zabumba from "@components/public/components/zabumba";
-
-const dynamicContent = [
-  {
-    naipe: "Agogo",
-    isOpen: false,
-    submenu: [
-      { ritmo: "Baião", url: "agogo-tamborim/baiao" },
-      { ritmo: "Xote", url: "agogo-tamborim/xote" },
-      { ritmo: "Quadrilha", url: "agogo-tamborim/quadrilha" },
-    ],
-  },
-  {
-    naipe: "Caixa",
-    isOpen: false,
-    submenu: [
-      { ritmo: "Baião", url: "caixa/baiao" },
-      { ritmo: "Xote", url: "caixa/xote" },
-      { ritmo: "Quadrilha", url: "caixa/quadrilha" },
-    ],
-  },
-  {
-    naipe: "Repique",
-    isOpen: false,
-    submenu: [
-      { ritmo: "Baião", url: "repique/baiao" },
-      { ritmo: "Xote", url: "repique/xote" },
-      { ritmo: "Quadrilha", url: "repique/quadrilha" },
-    ],
-  },
-  {
-    naipe: "Surdo",
-    isOpen: false,
-    submenu: [
-      { ritmo: "Baião", url: "surdo/baiao" },
-      { ritmo: "Xote", url: "surdo/xote" },
-      { ritmo: "Quadrilha", url: "surdo/quadrilha" },
-    ],
-  },
-  {
-    naipe: "Tamborim",
-    isOpen: false,
-    submenu: [
-      { ritmo: "Baião", url: "tamborim/baiao" },
-      { ritmo: "Xote", url: "tamborim/xote" },
-      { ritmo: "Quadrilha", url: "tamborim/quadrilha" },
-    ],
-  },
-  {
-    naipe: "Timbal",
-    isOpen: false,
-    submenu: [
-      { ritmo: "Baião", url: "timbal/baiao" },
-      { ritmo: "Xote", url: "timbal/xote" },
-      { ritmo: "Quadrilha", url: "timbal/quadrilha" },
-    ],
-  },
-  {
-    naipe: "Xequerê",
-    isOpen: false,
-    submenu: [
-      { ritmo: "Baião", url: "xequere/baiao" },
-      { ritmo: "Xote", url: "xequere/xote" },
-      { ritmo: "Quadrilha", url: "xequere/quadrilha" },
-    ],
-  },
-  {
-    naipe: "Zabumba",
-    isOpen: false,
-    submenu: [
-      { ritmo: "Baião", url: "zabumba/baiao" },
-      { ritmo: "Xote", url: "zabumba/xote" },
-      { ritmo: "Quadrilha", url: "zabumba/quadrilha" },
-    ],
-  },
-];
 
 export default function HomePage() {
   const [activePage, setActivePage] = useState("");
@@ -109,60 +33,52 @@ export default function HomePage() {
       setType("password");
     }
   };
+
   const suitsPassword = (evt: any) => {
-    evt.preventDefault();
-    if (
-      password != "triangulomatraca" &&
-      password != "caixa" &&
-      password != "repique" &&
-      password != "surdo" &&
-      password != "tamborim" &&
-      password != "timbal" &&
-      password != "xequere" &&
-      password != "zabumba"
-    ) {
-      window.alert("Senha incorreta, tente novamente");
-    }
-    console.log(password);
-    if (password === "triangulomatraca") {
-      setShowForm(!showForm);
-      setActivePage(password);
-      setTriangulo(!triangulo);
-    }
-    if (password === "caixa") {
-      setShowForm(!showForm);
-      setActivePage(password);
-      setCaixa(!caixa);
-    }
-    if (password === "repique") {
-      setShowForm(!showForm);
-      setActivePage(password);
-      setRepique(!repique);
-    }
-    if (password === "surdo") {
-      setShowForm(!showForm);
-      setActivePage(password);
-      setSurdo(!surdo);
-    }
-    if (password === "tamborim") {
-      setShowForm(!showForm);
-      setActivePage(password);
-      setTamborim(!tamborim);
-    }
-    if (password === "timbal") {
-      setShowForm(!showForm);
-      setActivePage(password);
-      setTimbal(!timbal);
-    }
-    if (password === "xequere") {
-      setShowForm(!showForm);
-      setActivePage(password);
-      setXequere(!xequere);
-    }
-    if (password === "zabumba") {
-      setShowForm(!showForm);
-      setActivePage(password);
-      setZabumba(!zabumba);
+    switch (password) {
+      case "triangulojunino2023":
+        setShowForm(!showForm);
+        setActivePage(password);
+        setTriangulo(!triangulo);
+        break;
+      case "caixa":
+        setShowForm(!showForm);
+        setActivePage(password);
+        setCaixa(!caixa);
+        break;
+      case "repiquejunino2023":
+        setShowForm(!showForm);
+        setActivePage(password);
+        setRepique(!repique);
+        break;
+      case "surdojunino2023":
+        setShowForm(!showForm);
+        setActivePage(password);
+        setSurdo(!surdo);
+        break;
+      case "tamborimjunino2023":
+        setShowForm(!showForm);
+        setActivePage(password);
+        setTamborim(!tamborim);
+        break;
+      case "timbaljunino2023":
+        setShowForm(!showForm);
+        setActivePage(password);
+        setTimbal(!timbal);
+        break;
+      case "xequere":
+        setShowForm(!showForm);
+        setActivePage(password);
+        setXequere(!xequere);
+        break;
+      case "zabumba":
+        setShowForm(!showForm);
+        setActivePage(password);
+        setZabumba(!zabumba);
+        break;
+      default:
+        window.alert("Senha incorreta, tente novamente");
+        break;
     }
   };
 
@@ -178,11 +94,6 @@ export default function HomePage() {
               height="420"
               alt={"Logo Multibloco Junino"}
             ></Image>
-            {/* {showForm === false ? (
-              <div className="flex h-full">
-                <AiOutlineCloseCircle className="text-3xl text-red-600" />
-              </div>
-            ) : null} */}
           </header>
           {showForm && (
             <form
@@ -216,8 +127,8 @@ export default function HomePage() {
               </div>
             </form>
           )}
-          {triangulo && <TrianguloMatraca />}
-          {caixa && <Caixa />}
+          {triangulo && <TrianguloMaraca />}
+          {caixa && <Caixa showForm={showForm} />}
           {repique && <Repique />}
           {surdo && <Surdo />}
           {tamborim && <Tamborim />}
