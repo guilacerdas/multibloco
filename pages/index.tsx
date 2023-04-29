@@ -41,7 +41,7 @@ export default function HomePage() {
         setActivePage(password);
         setTriangulo(!triangulo);
         break;
-      case "caixa":
+      case "caixajunino2023":
         setShowForm(!showForm);
         setActivePage(password);
         setCaixa(!caixa);
