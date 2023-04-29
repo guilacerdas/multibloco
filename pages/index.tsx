@@ -66,12 +66,12 @@ export default function HomePage() {
         setActivePage(password);
         setTimbal(!timbal);
         break;
-      case "xequere":
+      case "xequerejunino2023":
         setShowForm(!showForm);
         setActivePage(password);
         setXequere(!xequere);
         break;
-      case "zabumba":
+      case "zabumbajunino2023":
         setShowForm(!showForm);
         setActivePage(password);
         setZabumba(!zabumba);
