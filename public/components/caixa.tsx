@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
 const Caixa = () => {
+  const [runningVideo, setRunningVideo] = useState("");
+
   return (
     <>
-      <section className="w-full border">
+      <section className="w-full">
         <div className="flex flex-col items-center gap-3 lg:flex-row lg:justify-center ">
-          <div className="flex w-full ">
+          <div className="flex">
             <AiOutlineCloseCircle
               className="text-2xl"
               onClick={() => location.reload()}
@@ -18,6 +20,7 @@ const Caixa = () => {
             <select
               name="pets"
               id="pet-select"
+              onChange={(evt) => setRunningVideo(evt.target.value)}
               className="py-3 bg-white border rounded-md"
             >
               <option value="">--Escolha uma opção--</option>
@@ -28,6 +31,26 @@ const Caixa = () => {
             </select>
           </div>
         </div>
+        <section className="flex justify-center w-full">
+          {runningVideo === "baiao" && (
+            <iframe
+              src="https://drive.google.com/file/d/12pQND2oke4vC87T1zujqDSWahY_wHMB6/preview"
+              width="640"
+              height="480"
+              allow="autoplay"
+            ></iframe>
+          )}
+          {runningVideo === "carimbo" && <h2>Vídeo em Breve</h2>}
+          {runningVideo === "quadrilha" && <h2>Vídeo em Breve</h2>}
+          {runningVideo === "xote" && (
+            <iframe
+              src="https://drive.google.com/file/d/1pGWDiwotvo9Aia6LVZ3vJwIMVG-ZWINa/preview"
+              width="640"
+              height="480"
+              allow="autoplay"
+            ></iframe>
+          )}
+        </section>
       </section>
     </>
   );
