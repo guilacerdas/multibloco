@@ -128,7 +128,7 @@ export default function HomePage() {
             </form>
           )}
           {triangulo && <TrianguloMaraca />}
-          {caixa && <Caixa showForm={showForm} />}
+          {caixa && <Caixa />}
           {repique && <Repique />}
           {surdo && <Surdo />}
           {tamborim && <Tamborim />}

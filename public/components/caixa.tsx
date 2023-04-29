@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
-const Caixa = ({ showForm, setShowForm }: any) => {
+const Caixa = () => {
   return (
     <>
       <section className="w-full border">
