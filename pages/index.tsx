@@ -76,6 +76,11 @@ export default function HomePage() {
         setActivePage(password);
         setZabumba(!zabumba);
         break;
+      case "triangulojunino2023":
+        setShowForm(!showForm);
+        setActivePage(password);
+        setTriangulo(!triangulo);
+        break;
       default:
         window.alert("Senha incorreta, tente novamente");
         break;

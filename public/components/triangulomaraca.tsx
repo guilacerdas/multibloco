@@ -28,26 +28,24 @@ const TrianguloMaraca = () => {
               <option value="carimbo">Carimbó</option>
               <option value="quadrilha">Quadrilha</option>
               <option value="xote">Xote</option>
+              <option value="maracacarimbo">Maracá - Carimbó</option>
             </select>
           </div>
         </div>
         <section className="flex justify-center w-full">
-          {runningVideo === "baiao" && (
-            <iframe
-              src="https://drive.google.com/file/d/1n13DlGfaY9ghlkzkepyLBtRlY0Im-Iw2/preview"
-              width="640"
-              height="480"
-              allow="autoplay"
-            ></iframe>
-          )}
+          {runningVideo === "baiao" && <h2>Vídeo em Breve</h2>}
           {runningVideo === "carimbo" && <h2>Vídeo em Breve</h2>}
           {runningVideo === "quadrilha" && <h2>Vídeo em Breve</h2>}
-          {runningVideo === "xote" && (
+          {runningVideo === "xote" && <h2>Vídeo em Breve</h2>}
+          {runningVideo === "maracacarimbo" && (
             <iframe
-              src="https://drive.google.com/file/d/1CENukhaEvuQHWK-P5OaYjFQW4bhpWpW_/preview"
-              width="640"
-              height="480"
-              allow="autoplay"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/8HYh50pZIkM"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
             ></iframe>
           )}
         </section>

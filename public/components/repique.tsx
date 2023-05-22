@@ -26,7 +26,7 @@ const Repique = () => {
               <option value="">--Escolha uma opção--</option>
               <option value="baiao">Baião</option>
               <option value="carimbo">Carimbó</option>
-              <option value="quadrilha">Quadrilha</option>
+              <option value="galope">Galope</option>
               <option value="xote">Xote</option>
             </select>
           </div>
@@ -34,20 +34,46 @@ const Repique = () => {
         <section className="flex justify-center w-full">
           {runningVideo === "baiao" && (
             <iframe
-              src="https://drive.google.com/file/d/1AbceK9Y1tHk2jnEg_nEFL-kj7ajgseK1/preview"
-              width="640"
-              height="480"
-              allow="autoplay"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/jbQh9HJ0cnA"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
             ></iframe>
           )}
-          {runningVideo === "carimbo" && <h2>Vídeo em Breve</h2>}
-          {runningVideo === "quadrilha" && <h2>Vídeo em Breve</h2>}
+          {runningVideo === "carimbo" && (
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/oVRLCouqTBw"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          )}
+          {runningVideo === "galope" && (
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/gWSZdjw98sE"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          )}
           {runningVideo === "xote" && (
             <iframe
-              src="https://drive.google.com/file/d/1-UGcUyswTU5dPenoiaYzt2aMI959bZCg/preview"
-              width="640"
-              height="480"
-              allow="autoplay"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/IYBCfVvSf6s"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
             ></iframe>
           )}
         </section>
