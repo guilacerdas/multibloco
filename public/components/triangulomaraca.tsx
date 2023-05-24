@@ -33,10 +33,30 @@ const TrianguloMaraca = () => {
           </div>
         </div>
         <section className="flex justify-center w-full">
-          {runningVideo === "baiao" && <h2>Vídeo em Breve</h2>}
+          {runningVideo === "baiao" && (
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/Y05-74-tnqg"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          )}
           {runningVideo === "carimbo" && <h2>Vídeo em Breve</h2>}
           {runningVideo === "quadrilha" && <h2>Vídeo em Breve</h2>}
-          {runningVideo === "xote" && <h2>Vídeo em Breve</h2>}
+          {runningVideo === "xote" && (
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/WFP9ftMNYfM"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          )}
           {runningVideo === "maracacarimbo" && (
             <iframe
               width="560"

@@ -69,7 +69,7 @@ const Xequere = () => {
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/lOC3lfw5zco"
+              src="https://www.youtube.com/embed/6ExsMPv35oo"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
