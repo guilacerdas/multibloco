@@ -34,10 +34,13 @@ const Zabumba = () => {
         <section className="flex justify-center w-full">
           {runningVideo === "baiao" && (
             <iframe
-              src="https://drive.google.com/file/d/13cHWXQLMHDwRx9QAuDyYyhA3Qw8kUwko/preview"
-              width="640"
-              height="480"
-              allow="autoplay"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/Fn5RAMHL0hc"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
             ></iframe>
           )}
           {runningVideo === "carimbo" && <h2>Vídeo em Breve</h2>}
@@ -54,10 +57,13 @@ const Zabumba = () => {
           )}
           {runningVideo === "xote" && (
             <iframe
-              src="https://drive.google.com/file/d/1fe3gwnaaejLOgrr8XftymptYsIXf3Smm/preview"
-              width="640"
-              height="480"
-              allow="autoplay"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/2glabvMSqss"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
             ></iframe>
           )}
         </section>

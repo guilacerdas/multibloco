@@ -34,20 +34,26 @@ const Timbal = () => {
         <section className="flex justify-center w-full">
           {runningVideo === "baiao" && (
             <iframe
-              src="https://drive.google.com/file/d/1iv_887G71Snd2UY-ie6pQoPn7xGAZoMO/preview"
-              width="640"
-              height="480"
-              allow="autoplay"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/CRnw5B6UzSY"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
             ></iframe>
           )}
           {runningVideo === "carimbo" && <h2>Vídeo em Breve</h2>}
           {runningVideo === "quadrilha" && <h2>Vídeo em Breve</h2>}
           {runningVideo === "xote" && (
             <iframe
-              src="https://drive.google.com/file/d/1F1WwH5lHXyGVoKcIWmjrlYZ_PkVx4RJR/preview"
-              width="640"
-              height="480"
-              allow="autoplay"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/pRdNwtu4wrQ"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
             ></iframe>
           )}
         </section>
